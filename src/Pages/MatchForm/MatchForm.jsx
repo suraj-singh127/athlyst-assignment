@@ -130,9 +130,8 @@ const MatchForm = () => {
 
         case 4:
             return (
-                <div>
-                    <form onSubmit={handleSubmit}>
-                        Information entered by you -
+                <div className="matchInfo">
+                    <form onSubmit={handleSubmit} className="finalForm">
                         <MatchInfo
                             matchType={matchType}
                             teamName1={teamName1}
@@ -144,8 +143,10 @@ const MatchForm = () => {
                             location={location}
                             comments={comments}
                         />
-                        <button onClick={previousStep}>Back</button>
-                        <input type="submit" value="Submit" />
+                        <div>
+                            <button onClick={previousStep} className="submitButton">Back</button>
+                            <input type="submit" value="Submit" className="submitButton"/>
+                        </div>
                     </form>
                 </div>
             );
@@ -165,7 +166,9 @@ const MatchForm = () => {
             matchList.push(match);
             localStorage.setItem("matchList", JSON.stringify(matchList));
             return (
-                <div><h1>Success</h1></div>
+                <div className="entirePage">
+                    <h1>Success!!</h1>
+                </div>
             )
 
         default:
