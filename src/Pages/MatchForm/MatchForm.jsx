@@ -26,10 +26,10 @@ const MatchForm = () => {
     }
 
     //move forward one step in the form
-    const previousStep = () => {
-        const stepValue = step;
-        setStep(stepValue - 1);
-    }
+    // const previousStep = () => {
+    //     const stepValue = step;
+    //     setStep(stepValue - 1);
+    // }
 
     const handleChange = (event) => {
         setMatchType(event.target.value);
