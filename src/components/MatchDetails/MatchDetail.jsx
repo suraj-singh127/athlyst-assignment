@@ -4,49 +4,64 @@ import TimePicker from "react-time-picker";
 
 const MatchDetails = (props) => {
     return (
-        <div>
-            <div>
-                <p>Enter start time - </p>
-                <TimePicker
-                    amPmAriaLabel="Select AM/PM"
-                    clearAriaLabel="Clear value"
-                    clockAriaLabel="Toggle clock"
-                    hourAriaLabel="Hour"
-                    maxDetail="second"
-                    minuteAriaLabel="Minute"
-                    nativeInputAriaLabel="Time"
-                    onChange={props.setStartTime}
-                    secondAriaLabel="Second"
-                    value={props.startTime}
-                />
-            </div>
-            <div>
-                <p>Enter End time - </p>
-                <TimePicker
-                    amPmAriaLabel="Select AM/PM"
-                    clearAriaLabel="Clear value"
-                    clockAriaLabel="Toggle clock"
-                    hourAriaLabel="Hour"
-                    maxDetail="second"
-                    minuteAriaLabel="Minute"
-                    nativeInputAriaLabel="Time"
-                    onChange={props.setEndTime}
-                    secondAriaLabel="Second"
-                    value={props.endTime}
-                />
-            </div>
-            <div>
-                <form onSubmit={props.handleSubmit}>
-                    <label>
-                        Location:
-                        <input type="text" value={props.location} onChange={props.handleLocationChange} />
-                    </label>
-                    <label>
-                        Comments:
-                        <textarea value={props.comment} onChange={props.handleCommentChange} />
-                    </label>
-                    <input type="submit" value="Submit" />
-                </form>
+        <div className="matchDetails">
+            <div className="wrapperDiv">
+                <div className="timeDetails">
+                    <div className="timePicker" id="timePicker1">
+                        <p>Enter start time</p>
+                        <TimePicker
+                            amPmAriaLabel="Select AM/PM"
+                            clearAriaLabel="Clear value"
+                            clockAriaLabel="Toggle clock"
+                            hourAriaLabel="Hour"
+                            maxDetail="second"
+                            minuteAriaLabel="Minute"
+                            nativeInputAriaLabel="Time"
+                            onChange={props.setStartTime}
+                            secondAriaLabel="Second"
+                            value={props.startTime}
+                            className="timePicker"
+                        />
+                    </div>
+                    <div className="timePicker">
+                        <p>Enter End time</p>
+                        <TimePicker
+                            amPmAriaLabel="Select AM/PM"
+                            clearAriaLabel="Clear value"
+                            clockAriaLabel="Toggle clock"
+                            hourAriaLabel="Hour"
+                            maxDetail="second"
+                            minuteAriaLabel="Minute"
+                            nativeInputAriaLabel="Time"
+                            onChange={props.setEndTime}
+                            secondAriaLabel="Second"
+                            value={props.endTime}
+                            className="timePicker"
+                        />
+                    </div>
+                </div>
+                <div className="formDiv">
+                    <form onSubmit={props.handleSubmit} className="form">
+                        <label>
+                            Location:
+                            <input type="text" value={props.location} onChange={props.handleLocationChange} className="locationInput"/>
+                        </label>
+                        {props.matchType === 'Tournament' &&
+                            <label>
+                                Tournament Name:
+                                <input type="text" value={props.tournament} onChange={props.handleTournamentChange} />
+                            </label>
+                        }
+                        <label>
+                            Comments:
+                            <textarea value={props.comment} onChange={props.handleCommentChange} className="comments"/>
+                        </label>
+                        <div className="buttons">
+                            <input type="submit" value="Submit" className="submitButton"/>
+                            <button className="submitButton" onClick={props.previousStep}>Back</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     );
