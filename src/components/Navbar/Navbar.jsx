@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import './Navbar.scss'
 
 const Navbar = () => {
@@ -6,7 +7,7 @@ const Navbar = () => {
     return (
         <nav className="nav-navbar">
             <div className="logo">
-                <h1>Athlyst</h1>
+                <NavLink to="/" style={{ textDecoration:"none",color:"white" }}><h1>Athlyst</h1></NavLink>
             </div>
             <div className="container" onClick={() => { 
                 document.querySelector(".container").classList.toggle("change"); 
@@ -17,9 +18,7 @@ const Navbar = () => {
                 <div className="bar3"></div>
             </div>
             <ul className="navbar">
-                <li className="navLinks">
-                    <a href="https://www.linkedin.com/company/athlyst/" target="__blank">Services</a>
-                </li>
+                <NavLink to="/matchlist" className="navLinks">Match List</NavLink>
                 <li className="navLinks">
                     <a href="https://www.linkedin.com/company/athlyst/" target="__blank">About Us</a>
                 </li>

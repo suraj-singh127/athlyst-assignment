@@ -1,5 +1,4 @@
 import './Footer.scss';
-import logo from './logo.svg'
 import fbLogo from './fblogo.svg'
 import twitterLogo from './twitterLogo.svg';
 import linkedin from './linkedin.svg';
@@ -9,7 +8,7 @@ const Footer = () => {
     return(
         <div className='footer'>
             <div className='logo'>
-            <a href="https://www.convin.ai/" target="__blank"><img src={logo} alt="logofooter"/></a>
+            <a href="https://www.athlyst.com" target="__blank">Athlyst</a>
             </div>
             <div className='socials'>
                 <p className='text'>Follow us on - </p>
