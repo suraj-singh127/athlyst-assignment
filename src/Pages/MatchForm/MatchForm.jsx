@@ -21,6 +21,7 @@ const MatchForm = () => {
     const [teamPlace1, setTeamPlace1] = useState('Home');
     const [teamPlace2, setTeamPlace2] = useState('Away');
     const [teamName2, setTeamName2] = useState('');
+    const [date,setDate] = useState(dateToday);
 
     const matchList = localStorage.getItem("matchList") == null ? [] : JSON.parse(localStorage.getItem("matchList"));
 
@@ -99,6 +100,8 @@ const MatchForm = () => {
                     handleCommentChange={handleCommentChange}
                     handleSubmit={handleSubmit}
                     previousStep={previousStep}
+                    date={date}
+                    setDate={setDate}
                 />
             );
 
@@ -142,6 +145,7 @@ const MatchForm = () => {
                             endTime={endTime}
                             location={location}
                             comments={comments}
+                            date={date}
                         />
                         <div>
                             <button onClick={previousStep} className="submitButton">Back</button>

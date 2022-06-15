@@ -18,16 +18,16 @@ const Navbar = () => {
             </div>
             <ul className="navbar">
                 <li className="navLinks">
-                    <a href="https://www.convin.ai/" target="__blank">Services</a>
+                    <a href="https://www.linkedin.com/company/athlyst/" target="__blank">Services</a>
                 </li>
                 <li className="navLinks">
-                    <a href="https://www.convin.ai/about-us" target="__blank">About Us</a>
+                    <a href="https://www.linkedin.com/company/athlyst/" target="__blank">About Us</a>
                 </li>
                 <li className="navLinks">
-                    <a href="mailto: contact@convin.ai" target="__blank">Contact Us</a>
+                    <a href="https://www.linkedin.com/company/athlyst/" target="__blank">Contact Us</a>
                 </li>
                 <li className="navLinks">
-                    <a href="https://www.linkedin.com/company/convin/jobs/" target="__blank">Careers</a>
+                    <a href="https://www.linkedin.com/company/athlyst/" target="__blank">Careers</a>
                 </li>
             </ul>
         </nav>

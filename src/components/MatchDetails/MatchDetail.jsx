@@ -1,6 +1,7 @@
 import React from "react";
 import './MatchDetails.scss';
 import TimePicker from "react-time-picker";
+import DatePicker from "react-date-picker";
 
 const MatchDetails = (props) => {
     return (
@@ -22,6 +23,7 @@ const MatchDetails = (props) => {
                             value={props.startTime}
                             className="timePicker"
                         />
+                        <DatePicker onChange={props.setDate} value={props.date} />
                     </div>
                     <div className="timePicker">
                         <p>Enter End time</p>
@@ -38,6 +40,7 @@ const MatchDetails = (props) => {
                             value={props.endTime}
                             className="timePicker"
                         />
+                        <DatePicker onChange={props.setDate} value={props.date} />
                     </div>
                 </div>
                 <div className="formDiv">
@@ -49,7 +52,13 @@ const MatchDetails = (props) => {
                         {props.matchType === 'Tournament' &&
                             <label>
                                 Tournament Name:
-                                <input type="text" value={props.tournament} onChange={props.handleTournamentChange} />
+                                <input type="text" value={props.tournament} onChange={props.handleTournamentChange} style={{ width: "70%",
+                    fontSize: "1.6rem",
+                    backgroundColor: "transparent",
+                    outlineColor: "transparent",
+                    border: "transparent",
+                    borderBottom: "2px solid black",
+                    margin: "1rem" }}/>
                             </label>
                         }
                         <label>

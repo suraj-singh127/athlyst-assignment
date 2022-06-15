@@ -24,6 +24,9 @@ $defaultFontSize: 18px;
         display: flex;
         flex-direction: column;
         width: 300px;
+        h1{
+            font-size: 2rem;
+        }
 
         .selector {
             width: 100%;

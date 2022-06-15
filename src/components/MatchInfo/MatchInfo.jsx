@@ -15,6 +15,7 @@ const MatchInfo = (props) => {
             <div>
                 Start Time = {props.startTime}
                 &nbsp;End Time = {props.endTime}
+                <p>{props.date.toString().substring(0,15)}</p>
             </div>
             <div>
                 Venue = {props.location}

@@ -20,7 +20,7 @@ $defaultFontSize: 18px;
 
     .wrapperDiv {
         background-color: #fafdff2c;
-        padding: 5rem;
+        padding: 2rem;
         border-radius: 5rem;
 
         .timeDetails {
@@ -51,6 +51,15 @@ $defaultFontSize: 18px;
                 width: 100%;
 
                 .locationInput {
+                    width: 70%;
+                    font-size: 1.6rem;
+                    background-color: transparent;
+                    outline-color: transparent;
+                    border: transparent;
+                    border-bottom: 2px solid black;
+                    margin: 1rem;
+                }
+                .tournamentInput{
                     width: 70%;
                     font-size: 1.6rem;
                     background-color: transparent;
